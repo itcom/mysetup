@@ -1,14 +1,14 @@
 #!/bin/sh
 set -e
 
-MYVER=5.1.59
-Q4MVER=0.9.5
+MYVER=5.1.63
+Q4MVER=0.9.6
 
 CDIR=$(cd $(dirname $0) && pwd)
 cd /usr/local/src
 
 if [ ! -f mysql-$MYVER.tar.gz ]; then
-    wget http://downloads.mysql.com/archives/mysql-5.1/mysql-$MYVER.tar.gz
+    wget ftp://ftp.jaist.ac.jp/pub/mysql/Downloads/MySQL-5.1/mysql-$MYVER.tar.gz
 fi
 
 if [ -d mysql-$MYVER ]; then
@@ -62,7 +62,7 @@ chmod 755 /usr/local/q4m/var
 
 cd /usr/local/src
 if [ ! -f q4m-$Q4MVER.tar.gz ]; then
-    wget http://q4m.kazuhooku.com/dist/q4m-$Q4MVER.tar.gz
+    wget http://q4m.kazuhooku.com/dist/pre/q4m-$Q4MVER.tar.gz
 fi
 if [ -d q4m-$Q4MVER ]; then
     rm -rf q4m-$Q4MVER
