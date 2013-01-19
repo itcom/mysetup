@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-MYVER=5.1.63
-Q4MVER=0.9.6
+MYVER=5.1.67
+Q4MVER=0.9.7
 
 CDIR=$(cd $(dirname $0) && pwd)
 cd /usr/local/src
@@ -62,7 +62,7 @@ chmod 755 /usr/local/q4m/var
 
 cd /usr/local/src
 if [ ! -f q4m-$Q4MVER.tar.gz ]; then
-    wget http://q4m.kazuhooku.com/dist/pre/q4m-$Q4MVER.tar.gz
+    wget http://q4m.kazuhooku.com/dist/q4m-$Q4MVER.tar.gz
 fi
 if [ -d q4m-$Q4MVER ]; then
     rm -rf q4m-$Q4MVER
